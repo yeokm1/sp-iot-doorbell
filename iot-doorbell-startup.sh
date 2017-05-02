@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /home/alarm/iot-doorbell
+cd /home/alarm/sp-iot-doorbell
 /usr/bin/python bell-camera.py &
