@@ -85,14 +85,8 @@ SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown ro
 ```bash
 su alarm
 cd ~
-mkdir iot-doorbell
-cd iot-doorbell
-#Place the files bell-camera.py, iot-doorbell.service and iot-doorbell-startup.sh into this folder
-
-#You can run these SCP commands on your host machine. Replace x.x.x.x with the IP address of the RPi.
-#scp bell-camera.py alarm@x.x.x.x:/home/alarm/iot-doorbell
-#scp iot-doorbell.service alarm@x.x.x.x:/home/alarm/iot-doorbell
-#scp iot-doorbell-startup.sh alarm@x.x.x.x:/home/alarm/iot-doorbell
+git clone https://github.com/yeokm1/sp-iot-doorbell.git
+cd sp-iot-doorbell
 
 #chmod in case you transfer the file in without executable permissions
 chmod +x iot-doorbell-startup.sh
